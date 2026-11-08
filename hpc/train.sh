@@ -16,7 +16,7 @@
 ##BSUB -N
 
 set -eu
-cd "$(dirname "$0")/.."
+cd "${LS_SUBCWD:-$(dirname "$0")/..}"
 source hpc/env.sh   # uv on the PATH, caches off the home quota
 
 # Your training command, e.g.:
